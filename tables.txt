@@ -1,0 +1,49 @@
+create table STAFF_INFO(STAFF_ID VARCHAR2(5) PRIMARY KEY,STAFF_NAME VARCHAR2(25),DATE_OF_BIRTH DATE,ADDRESS VARCHAR2(50),COUNTRY_ID VARCHAR2(5),GENDER CHAR(1),SALARY NUMBER(7,2),HIGHEST_QUALIFICATION VARCHAR2(20),EMAIL_ID VARCHAR2(20),CONTACT_NUMBER VARCHAR2(10),DESIGNATION VARCHAR(20),YEAR_PASSED_OUT NUMBER(5),EXPERIENCE NUMBER(2),DOJ DATE,FOREIGN KEY(COUNTRY_ID) REFERENCES COUNTRY_INFO(COUNTRY_ID),FOREIGN KEY(SALARY) REFERENCES STAFF_SALARY(SALARY));
+
+
+create table COUNTRY_INFO(COUNTRY_ID VARCHAR2(5) PRIMARY KEY,COUNTRY_NAME VARCHAR2(25),STATE_NAME VARCHAR2(25));
+
+create table STAFF_SALARY(YEAR_OF_EXPERIENCE NUMBER(2),HIGHEST_QUALIFICATION VARCHAR2(10),SALARY NUMBER(7,2) PRIMARY KEY);
+
+insert into country_info values('C01','India','TamilNadu');
+
+insert into country_info values('C02','India','Kerala');
+
+insert into country_info values('C03','India','Karnataka');
+
+insert into country_info values('C04','India','Andhra Pradesh');
+
+insert into country_info values('C05','UK','Scotland');
+
+insert into country_info values('C06','USA','New Jersey');
+
+insert into country_info values('C07','Italy','Rome');
+
+
+insert into staff_salary values(5,'UG',20000);
+
+insert into staff_salary values(10,'UG',25000);
+
+insert into staff_salary values(15,'UG',30000);
+
+insert into staff_salary values(20,'UG',35000);
+
+insert into staff_salary values(25,'UG',40000);
+
+insert into staff_salary values(30,'UG',45000);
+
+insert into staff_salary values(37,'UG',50000);
+
+insert into staff_salary values(5,'PG',26000);
+
+insert into staff_salary values(10,'PG',31000);
+
+insert into staff_salary values(15,'PG',36000);
+
+insert into staff_salary values(20,'PG',41000);
+
+insert into staff_salary values(25,'PG',46000);
+
+insert into staff_salary values(30,'PG',51000);
+
+insert into staff_salary values(34,'PG',56000);
